@@ -1,0 +1,23 @@
+.form-create{
+    border: groove;
+    width: 22rem;
+    margin-left: 28rem;
+    margin-top: 10rem;
+    display: grid;
+    height: 15rem;
+    justify-content: center;
+    background: linear-gradient(45deg, #81bc9d, #eea7a7);
+}
+.table-create{
+margin-top: auto;
+    
+}
+.form-control{
+    height: 1.5rem;
+    padding-left: 19px;
+}
+.btn-create{
+    width: 14rem;
+    height: 2rem;
+    margin-top: auto;
+}

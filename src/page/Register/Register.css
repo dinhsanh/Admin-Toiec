@@ -1,0 +1,69 @@
+.registerPage {
+  max-width: 1200px;
+  margin: 50px auto;
+}
+.registerPage .registerForm {
+  text-align: center;
+}
+.registerPage .registerForm .title {
+  font-weight: bold;
+  font-size: 30px;
+  color: black;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.registerPage .registerForm .input-item {
+  margin: 0 auto;
+  max-width: 500px;
+  padding-bottom: 30px;
+}
+.registerPage .registerForm .choose-item {
+  text-align: left;
+  display: flex;
+  gap: 3rem;
+  padding-left: 5px;
+  margin: 20px 0px;
+}
+.registerPage .registerForm .choose-item input {
+  transform: scale(1.5);
+}
+.registerPage .registerForm .choose-item label {
+  padding-left: 10px;
+}
+.registerPage .registerForm .dateofBirth {
+  text-align: left;
+  margin-bottom: 20px;
+}
+.registerPage .registerForm .dateofBirth input {
+  border-radius: 5px;
+  margin-left: 10px;
+  font-size: 15px;
+}
+.registerPage .registerForm .login-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.registerPage .registerForm .login-btn-wrapper .login-btn {
+  background: #656ef1;
+  border-radius: 20px;
+  border: none;
+  padding: 7px 40px;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+.registerPage .registerForm .login {
+  text-align: center;
+  margin-top: 20px;
+}
+.registerPage .registerForm .login span {
+  color: rgb(80, 125, 212);
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+}/*# sourceMappingURL=Register.css.map */

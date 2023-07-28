@@ -1,0 +1,19 @@
+/* .ant-table-cell{
+    width: -1rem;
+    padding-right: 0%;
+} */
+.title-table{
+display: flex;
+justify-content: space-around;
+margin-left: 20rem;
+padding-top: 6px;
+}
+.btn_cre{
+    margin-top: 15px;
+    background: linear-gradient( #b3c4d8, #e1b7b7);
+}
+.title-head{
+    font-size: x-large;
+    color: brown;
+    margin-bottom: 10px;
+}

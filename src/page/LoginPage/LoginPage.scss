@@ -1,0 +1,58 @@
+.loginPage {
+    max-width: 1200px;
+    margin: 50px auto;
+    & .loginForm {
+       
+       text-align: center;
+       & .title {
+          font-weight: bold;
+          font-size: 30px;
+          color: black;
+          padding-bottom: 30px;
+          text-align: center;
+       }
+       & .input-item {
+          margin: 0 auto;
+          max-width: 500px;
+          padding-bottom: 50px;
+       }
+       &  .login-btn-wrapper {
+          display: flex;
+          justify-content: center;
+          margin-top: 30px;
+    
+          & .login-btn {
+             background: #656ef1;
+             border-radius: 20px;
+             border: none;
+             padding: 10px 40px;
+             text-align: center;
+             cursor: pointer;
+             color: #fff;
+             font-size: 20px;
+             font-weight: 700;
+          }
+          & .login-btn:hover {
+             opacity: 0.7;
+          }
+       }
+       & .register {
+          text-align: center;
+          margin-top: 20px;
+ 
+          span {
+             color: rgb(80, 125, 212);
+             cursor: pointer;
+          }
+       }
+    }
+ 
+ }
+ 
+ .no-underline {
+    text-decoration: none;
+ }
+ 
+ .error-message {
+    color: red;
+ }
