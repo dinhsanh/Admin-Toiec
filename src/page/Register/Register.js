@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './RegisterPage.css'
+import './Register.css'
 import { UserOutlined, UserAddOutlined, InfoCircleOutlined, KeyOutlined } from '@ant-design/icons';
 import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
 import { EnvelopeAt, GeoAlt } from 'react-bootstrap-icons';
@@ -15,14 +15,7 @@ function RegisterPage() {
          username: '',
          password: '',
          confirmPassword: '',
-         role: '',
-         surname: '',
-         name: '',
-         email: '',
-         dateOfBirth: '',
-         address: '',
-         phone: '',
-         age: 0
+         
       }
    );
    const [formErrors, setFormErrors] = useState({});
@@ -49,18 +42,18 @@ function RegisterPage() {
       if (hasSpecialCharacters(user.username)) {
          errors.username = 'Username cannot contain special characters.'
       }
-      if (hasSpecialCharacters(user.surname)) {
-         errors.surname = 'Surname cannot contain special characters.'
-      }
-      if (hasSpecialCharacters(user.name)) {
-         errors.name = 'Name cannot contain special characters.'
-      }
-      if (!isValidEmail(user.email)) {
-         errors.email = 'Invalid email'
-      }
-      if (user.age < 0) {
-         errors.age = 'Invalid age'
-      }
+      // if (hasSpecialCharacters(user.surname)) {
+      //    errors.surname = 'Surname cannot contain special characters.'
+      // }
+      // if (hasSpecialCharacters(user.name)) {
+      //    errors.name = 'Name cannot contain special characters.'
+      // }
+      // if (!isValidEmail(user.email)) {
+      //    errors.email = 'Invalid email'
+      // }
+      // if (user.age < 0) {
+      //    errors.age = 'Invalid age'
+      // }
       if (Object.keys(errors).length > 0) {
          setFormErrors(errors);
       }
@@ -69,8 +62,8 @@ function RegisterPage() {
             const messageError = "Password and Confirm password don't match"
             toast.error(messageError, { autoClose: 2000 })
          }
-         else if (!user.username.trim() || !user.password.trim() || !user.confirmPassword.trim() || !user.role
-            || !user.surname.trim() || !user.name.trim() || !user.email) {
+         else if (!user.username.trim() || !user.password.trim() || !user.confirmPassword.trim() || !user.role){
+            // || !user.surname.trim() || !user.name.trim() || !user.email) {
             const messageWarn = "You need to enter all the information!!!"
             toast.warn(messageWarn, { autoClose: 2000 })
          }
@@ -98,8 +91,9 @@ function RegisterPage() {
                      />}
                      name='username'
                      onChange={handleChange}
+                     rules={[{ required: true, message: 'Please input usename!' }]}
                   />
-                  {formErrors.username && <div className='error-message'>{formErrors.username}</div>}
+                  {/* {formErrors.username && <div className='error-message'>{formErrors.username}</div>} */}
                </div>
                <div className='input-item'>
                   <Input.Password style={{ padding: '10px', fontSize: '15px' }}
@@ -109,6 +103,7 @@ function RegisterPage() {
                      iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
                      name='password'
                      onChange={handleChange}
+                     rules={[{ required: true, message: 'Please input password!' }]}
                   />
 
                </div>
@@ -120,6 +115,8 @@ function RegisterPage() {
                      iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
                      name='confirmPassword'
                      onChange={handleChange}
+                     rules={[{ required: true, message: 'Please input comfirmpassword!' }]}
+
                   />
                   <div className='choose-item'>
                      <div>
@@ -136,7 +133,7 @@ function RegisterPage() {
                         <label>Admin</label>
                      </div>
                   </div>
-                  <div className='input-item'>
+                  {/* <div className='input-item'>
                      <Input style={{ padding: '10px', fontSize: '15px' }}
                         placeholder="Enter your surname"
                         prefix={<UserAddOutlined />}
@@ -173,14 +170,14 @@ function RegisterPage() {
                         required
                      />
                      {formErrors.email && <div className='error-message'>{formErrors.email}</div>}
-                  </div>
-                  <div className='dateofBirth'>
+                  </div> */}
+                  {/* <div className='dateofBirth'>
                      <label for="birthday">Birthday:</label>
                      <input type="date" id="birthday" name="dateOfBirth"
                         value={user.dateOfBirth ? user.dateOfBirth.toString().split('T')[0] : ''}
                         onChange={handleChange} />
-                  </div>
-                  <div className='input-item'>
+                  </div> */}
+                  {/* <div className='input-item'>
                      <Input style={{ padding: '10px', fontSize: '15px' }}
                         type='text'
                         placeholder="Enter your address"
@@ -188,15 +185,15 @@ function RegisterPage() {
                         name='address'
                         onChange={handleChange}
                      />
-                  </div>
-                  <div className='input-item'>
+                  </div> */}
+                  {/* <div className='input-item'>
                      <PhoneInput
                         country={'vn'}
                         value={user.phone}
                         onChange={handleChangePhone}
                      />
-                  </div>
-                  <div className='input-item'>
+                  </div> */}
+                  {/* <div className='input-item'>
                      <Input style={{ padding: '10px', fontSize: '15px' }}
                         type='number'
                         placeholder="Enter your age"
@@ -206,7 +203,7 @@ function RegisterPage() {
                         onChange={handleChange}
                      />
                      {formErrors.age && <div className='error-message'>{formErrors.age}</div>}
-                  </div>
+                  </div> */}
                   <div className='login-btn-wrapper'>
                      <input className='login-btn' type='submit' value={"REGISTER"} />
                   </div>
@@ -224,5 +221,4 @@ function RegisterPage() {
       </>
    )
 }
-
 export default RegisterPage

@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import './sidebar.css'
-import {
-    BulbOutlined, FacebookOutlined, DollarOutlined, ReadOutlined, FileOutlined, ContactsOutlined, DatabaseOutlined
-} from '@ant-design/icons';
+import {BulbOutlined,UserOutlined, FacebookOutlined, DollarOutlined,
+     ReadOutlined, FileOutlined, ContactsOutlined, DatabaseOutlined} from '@ant-design/icons';
 import { HouseDoorFill } from 'react-bootstrap-icons';
-import Logoin from '../Asset/Screenshot 2023-07-21 123001.png'
+import Logoin from '../Asset/91050765.webp'
 import { Layout, Menu } from 'antd';
 import { useNavigate } from 'react-router-dom';
 const { Header, Sider, Content } = Layout;
@@ -26,6 +25,15 @@ function Sidebar({ collapsed }) {
                         label: "Home",
                         icon: <HouseDoorFill />,
                         key: '/homepage',
+                    },
+                    {
+                        label: "Account",
+                        icon: <UserOutlined />,
+                        key: '/account',
+                    },{
+                        label: "Practice",
+                        icon: <DatabaseOutlined />,
+                        key: '/practice',
                     },
                     {
                         label: "Practice L&R",
@@ -91,7 +99,11 @@ function Sidebar({ collapsed }) {
                             },  {
                                 label:'All Vocabulary',
                                 key: '/allvocabulary'
-                            }, 
+                            }
+                            // ,{
+                            //     label:'All Question',
+                            //     key: '/allquestion'
+                            // },  
                         ] 
                         
                     },

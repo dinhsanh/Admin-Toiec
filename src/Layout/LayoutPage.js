@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
-import { Layout, Menu, Button, theme } from 'antd';
+import { Layout } from 'antd';
 import HeaderPage from '../page/HeaderPage/Headerpage';
-import { Routes, Route} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Sidebar from '../Side-bar/Sidebar';
 import TopicVocabulary from '../page/Vocabulary/TopicVocabulary';
 import HomePage from '../page/HomePage/HomePage';
 import LoginPage from '../page/LoginPage/LoginPage';
 import AllVocabulary from '../page/Vocabulary/AllVocabulary';
 import Create from '../page/Vocabulary/Admin/Create';
-const { Header, Footer, Sider, Content } = Layout;
+import Account from '../page/Account/Account';
+import Practice from '../page/Practice/Practice';
+import Part1Photo from '../page/Practice/FullPart/Part1Photo';
+import PracticeListen from '../page/Practice/PracticeParts';
+import PracticeParts from '../page/Practice/PracticeParts';
+import Footer from '../page/Footer/Footer';
+const { Header,  Sider, Content } = Layout;
 
 function LayoutPage() {
   const [collapsed, setCollapsed] = useState(false);
@@ -27,10 +33,14 @@ function LayoutPage() {
             <Route path="/topicvocabulary" element={<TopicVocabulary />} />
             <Route path="/allvocabulary" element={<AllVocabulary />} />
             <Route path="/homepage" element={<HomePage />} />
+            <Route path="/account" element={<Account />} />
+            <Route path="/practice" element={<Practice />} />
+            <Route path="/photo" element={<Part1Photo />} />
+            <Route path="/practice_Part/:choose" element={<PracticeParts/>}/>
           </Routes>
 
         </Content>
-        {/* <Footer >Footer</Footer> */}
+        <Footer />
       </Layout>
     </Layout>
 

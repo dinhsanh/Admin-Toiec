@@ -29,7 +29,7 @@ function HeaderPage({ setCollapsed, collapsed }) {
         <Header
             style={{
                 padding: 0,
-                background: "white",
+                background: "#fffefc",
                 justifyContent: 'space-between',
                 display: 'flex'
 
@@ -48,10 +48,10 @@ function HeaderPage({ setCollapsed, collapsed }) {
                         }}
                     ></Button>
                 </div>
-                <div className='search'>
+                {/* <div className='search'>
                     <SearchOutlined />
                     <input type='text' placeholder="Search projects"></input>
-                </div>
+                </div> */}
             </div>
 
             <div className="items">

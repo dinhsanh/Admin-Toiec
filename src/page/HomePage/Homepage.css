@@ -1,0 +1,60 @@
+*{
+    font-family: SVN-Poppins,sans-serif;
+}
+.background-section {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.mui-box {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 32px;
+}
+
+.cart-intro {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.name-pro{
+    display: flex;
+    font-weight: 600;
+    font-size: 60px;
+    text-transform: uppercase;
+    -webkit-text-stroke-width: 1px;
+    align-items: self-end;
+    -webkit-text-stroke-color: #81fafc;
+    text-shadow: 0 4px 8px #3ce7e7;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.Slogan-getpro{
+    text-align: center;
+    width: max-content;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 90px;
+    text-transform: capitalize;
+    color: #fff;
+    text-shadow: 0 0 6.5px #6dffff;
+}
+.sup{
+    font-size: 25px;
+    padding-right: 10px;
+}
+.style-name{
+    -webkit-text-stroke-width: 0;
+    -webkit-text-stroke-color: unset;
+    text-shadow: 0 0 0 transparent;
+    color: #fff;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+}

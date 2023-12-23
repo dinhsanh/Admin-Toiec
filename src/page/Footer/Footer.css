@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background: red;
+    background: rgb(33, 51, 67);
     border-top: 1px solid rgba(0, 0, 0, 0.15);
     top: 0;
     min-height: 4rem;

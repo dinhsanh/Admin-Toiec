@@ -9,11 +9,26 @@ margin-left: 20rem;
 padding-top: 6px;
 }
 .btn_cre{
-    margin-top: 15px;
     background: linear-gradient( #b3c4d8, #e1b7b7);
 }
 .title-head{
     font-size: x-large;
     color: brown;
     margin-bottom: 10px;
+}
+.title-head2{
+    font-size: x-large;
+    color: brown;
+    margin-bottom: 10px;
+    margin-right: 25rem;
+}
+.form-title{
+    padding: 10px ;
+}
+
+.title-allvocab {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

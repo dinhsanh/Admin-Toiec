@@ -9,15 +9,13 @@ function Create() {
 
  const handleSubmitCreate = (e) => {
   e.preventDefault();
-  console.log(inputdata)
     createCategory('vocabularyCategories/create', inputdata).then((res) => {
       alert('Vocabulary Added Succesfully')
       navigate('/topicvocabulary')
     }).then((err) => {
-      console.log(err)
+      console.error(err)
     })
  }
-
   return (
     <form onSubmit={handleSubmitCreate}>
       <div className="form-create">

@@ -43,8 +43,8 @@ function LoginPage() {
          else {
             loginAPI('accounts/login', data).then((res) => {
                dispatch(userActions.login(data))
-               toast.success(res.data.message, { autoClose: 2000 })
-               navigate('/')
+               toast.success(res.data.message, { autoClose: 1000 })
+               navigate('/homepage')
             }).catch((error) => {
                toast.error(error.response.data.message, { autoClose: 2000 })
             })
